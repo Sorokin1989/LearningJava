@@ -1,4 +1,4 @@
-package ru.sorokin.lessons.abstraction;
+package ru.sorokin.lessons.interface_1;
 
 public class Ono implements IAnimal {
     @Override
