@@ -8,8 +8,8 @@ public class Exception4 {
     public static void main(String[] args) {
         try {
             run();
-        } catch (IOException | ParseException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+
 
         }
     }
