@@ -6,12 +6,7 @@ import ru.sorokin.lessons.interface_1.IAnimal;
 
 public class Test {
     public static void main(String[] args) {
-        Cat1 cat=new Cat1();
-        Dog1 dog=new Dog1();
-        dog.makeSound();
-        cat.makeSound();
-        cat.eat();
-        dog.eat();
+
 
 
 
