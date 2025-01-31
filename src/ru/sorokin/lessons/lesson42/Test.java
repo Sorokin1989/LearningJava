@@ -2,9 +2,10 @@ package ru.sorokin.lessons.lesson42;
 
 public class Test {
     public static void main(String[] args) {
-    String string1="Hello";
-    String string2="Hello";
-        System.out.println(string1.equals(string2));
+    String a="Hello";
+    String b="Hello123".substring(0,5);
+        System.out.println(b);
+        System.out.println(a==b);
 
 
 
