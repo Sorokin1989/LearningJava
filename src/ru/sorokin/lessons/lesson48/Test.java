@@ -2,8 +2,8 @@ package ru.sorokin.lessons.lesson48;
 
 public class Test {
     public static void main(String[] args) {
-         Animal animal = Animal.CAT;
-        System.out.println(animal.getTranslation());
+       //  Animal animal = Animal.DOG;
+       // System.out.println(animal);
         //     switch (animal) {
         //        case CAT:
         //           System.out.println("it's a cat");
@@ -13,7 +13,8 @@ public class Test {
         //          break;
 
         //  }
-      //  Season season = Season.SUMMER;
+       Season season = Season.WINTER;
+        System.out.println(season.getTemperature());
 
       //  System.out.println(season.getClass());
 
