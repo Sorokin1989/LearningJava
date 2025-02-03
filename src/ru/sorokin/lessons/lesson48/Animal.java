@@ -1,5 +1,14 @@
 package ru.sorokin.lessons.lesson48;
 
 public enum Animal {
-    DOG,CAT,FROG
-}
+    DOG("Собака"),CAT("Кошка"),FROG("Лягушка");
+    private String translation;
+    Animal(String translation) {
+        this.translation = translation;
+    }
+
+public String getTranslation() {
+    return translation;
+        }
+    }
+
