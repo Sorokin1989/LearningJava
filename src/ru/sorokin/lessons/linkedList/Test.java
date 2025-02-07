@@ -20,7 +20,7 @@ public class Test {
 
         long start = System.currentTimeMillis();
         for(int i=0; i<100000;i++) {
-            list.add(i);
+            list.add(0,i);
         }
 
 
