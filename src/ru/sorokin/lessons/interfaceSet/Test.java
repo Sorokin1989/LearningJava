@@ -7,21 +7,23 @@ import java.util.TreeSet;
 
 public class Test {
     public static void main(String[] args) {
-        Set<String> hashSet=new HashSet<>();
-        Set<String> linkedHashSet=new LinkedHashSet<>();
-        Set<String> treeSet=new TreeSet<>();
+        Set<String> hashSet = new HashSet<>();
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+        Set<String> treeSet = new TreeSet<>();
 
         hashSet.add("Mike");
         hashSet.add("Katy");
         hashSet.add("Tom");
         hashSet.add("George");
         hashSet.add("Donald");
+        hashSet.add("Tom");
+        hashSet.add("Tom");
 
-        System.out.println(hashSet.contains("Tom"));
-        System.out.println(hashSet.contains("Tim"));
+        for (String name : hashSet) {
+            System.out.println(name);
 
-        System.out.println(hashSet.isEmpty());
-
+        }
+        System.out.println(hashSet);
 
     }
 }
