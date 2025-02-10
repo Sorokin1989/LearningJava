@@ -11,13 +11,12 @@ public class Test {
         Set<String> linkedHashSet=new LinkedHashSet<>();
         Set<String> treeSet=new TreeSet<>();
 
-        linkedHashSet.add("Mike");
-        linkedHashSet.add("Katy");
-        linkedHashSet.add("Tom");
-        linkedHashSet.add("George");
-        linkedHashSet.add("Donald");
-
-        for (String name: linkedHashSet) {
+        treeSet.add("Mike");
+        treeSet.add("Katy");
+        treeSet.add("Tom");
+        treeSet.add("George");
+        treeSet.add("Donald");
+        for (String name: treeSet) {
             System.out.println(name);
 
         }
