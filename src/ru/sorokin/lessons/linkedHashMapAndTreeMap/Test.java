@@ -13,7 +13,7 @@ public class Test {
 
         Map<Integer,String> treeMap=new TreeMap<>();// пары(ключ,значение) сортируются по ключу (естественный порядок)
 
-        testMap(linkedHashMap);
+        testMap(treeMap);
 
     }
     public static void testMap (Map<Integer,String> map) {
