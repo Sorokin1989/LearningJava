@@ -11,15 +11,17 @@ public class Test {
         Set<String> linkedHashSet=new LinkedHashSet<>();
         Set<String> treeSet=new TreeSet<>();
 
-        treeSet.add("Mike");
-        treeSet.add("Katy");
-        treeSet.add("Tom");
-        treeSet.add("George");
-        treeSet.add("Donald");
-        for (String name: treeSet) {
-            System.out.println(name);
+        hashSet.add("Mike");
+        hashSet.add("Katy");
+        hashSet.add("Tom");
+        hashSet.add("George");
+        hashSet.add("Donald");
 
-        }
+        System.out.println(hashSet.contains("Tom"));
+        System.out.println(hashSet.contains("Tim"));
+
+        System.out.println(hashSet.isEmpty());
+
 
     }
 }
