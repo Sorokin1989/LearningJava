@@ -1,9 +1,6 @@
 package ru.sorokin.lessons.hashcodeAndEquals;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -11,7 +8,7 @@ public class Test {
         Set<Person> set=new HashSet<>();
 
         Person person1=new Person(1,"Mike");
-        Person person2=new Person(2,"Katy");
+        Person person2=new Person(1,"Mike");
 
         map.put(person1,"123");
         map.put(person2,"123");
@@ -41,5 +38,17 @@ class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) return false;
+        Person person = (Person) object;
+        return id == person.id && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 }
