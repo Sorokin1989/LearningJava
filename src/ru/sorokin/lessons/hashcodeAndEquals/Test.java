@@ -51,4 +51,11 @@ class Person {
     public int hashCode() {
         return Objects.hash(id, name);
     }
+    /* Контракт hashcode() equals()
+    1) У двух проверяемых объектов вызываем метод hashcode()
+    если хэши разные--> два объекта точно разные
+    2)если хэши одинаковые--> equals
+    3) equals()--> выдает ответ
+
+     */
 }
