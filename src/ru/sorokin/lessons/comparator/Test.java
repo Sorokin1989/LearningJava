@@ -25,42 +25,31 @@ public class Test {
         numbers.add(100);
         numbers.add(5);
 
-        Collections.sort(numbers,new BackwardsIntegerComparator());
+        Collections.sort(numbers, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                if (o1 > o2) {
+                    return -1;
+                } else if (o1 < o2) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+        });
         System.out.println(numbers);
-
     }
 }
 
-class StringLengthComparator implements Comparator<String> {
 
-    @Override
-    public int compare(String o1, String o2) {
-        if (o1.length() > o2.length()) {
-            return 1;
-        } else if (o1.length() < o2.length()) {
-            return -1;
-        } else {
-            return 0;
 
-        }
 
-    }
 
-}
 
-class BackwardsIntegerComparator implements Comparator<Integer> {
 
-    @Override
-    public int compare(Integer o1, Integer o2) {
-        if (o1 > o2) {
-            return -1;
-        } else if (o1 < o2) {
-            return 1;
-        } else {
-            return 0;
 
-        }
-    }
-}
+
+
+
 
 
