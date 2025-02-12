@@ -2,6 +2,7 @@ package ru.sorokin.lessons.comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Test {
@@ -26,6 +27,19 @@ public class Test {
         System.out.println(numbers);
 
 
+
+
+
+    }
+}
+class StringLengthComparator implements Comparator<String> {
+
+    @Override
+    public int compare(String o1, String o2) {
+       /* o1>o2==>1;
+          o1<o2==>-1;
+          o1==02==>0
+        */
 
 
     }
