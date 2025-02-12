@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        List<Person> peopleList=new ArrayList<>();
-        Set<Person> peopleSet=new TreeSet<>();
+        List<Person> peopleList = new ArrayList<>();
+        Set<Person> peopleSet = new TreeSet<>();
         addElements(peopleList);
         addElements(peopleSet);
 
@@ -15,16 +15,17 @@ public class Test {
         System.out.println(peopleSet);
 
 
-
     }
+
     private static void addElements(Collection collection) {
-        collection.add(new Person(2,"Katy"));
-        collection.add(new Person(1,"Bob"));
-        collection.add(new Person(4,"George"));
-        collection.add(new Person(3,"Tom"));
+        collection.add(new Person(2, "Katy"));
+        collection.add(new Person(1, "Bob"));
+        collection.add(new Person(4, "George"));
+        collection.add(new Person(3, "To"));
 
     }
 }
+
 class Person implements Comparable<Person> {
     private int id;
     private String name;
@@ -36,6 +37,10 @@ class Person implements Comparable<Person> {
 
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -60,14 +65,14 @@ class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
-        if(this.id>o.getId()) {
+        if (this.name.length() > o.getName().length()) {
             return 1;
-        } else if (this.id<o.getId()) {
+        } else if (this.name.length() < o.getName().length()) {
             return -1;
-        }else {
+        } else {
             return 0;
         }
 
-        }
     }
+}
 
