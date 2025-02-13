@@ -8,8 +8,9 @@ public class Test {
         stack.push(5);
         stack.push(3);
         stack.push(1);
+
+        System.out.println(stack.peek());
         System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+
     }
 }
