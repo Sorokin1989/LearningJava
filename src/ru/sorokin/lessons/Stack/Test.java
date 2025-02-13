@@ -9,8 +9,10 @@ public class Test {
         stack.push(3);
         stack.push(1);
 
-        System.out.println(stack.peek());
-        System.out.println(stack.pop());
+       while (!stack.empty()) {
+           System.out.println(stack.pop());
+       }
+
 
     }
 }
