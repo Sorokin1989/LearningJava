@@ -12,15 +12,12 @@ public class Test {
         Person person3=new Person(3);
         Person person4=new Person(4);
 
-        Queue<Person> people=new ArrayBlockingQueue<Person>(10);
-        people.add(person2);
-        people.add(person4);
-        people.add(person1);
-        people.add(person3);
+        Queue<Person> people=new ArrayBlockingQueue<Person>(3);
+        System.out.println(people.offer(person2));
+        System.out.println(people.offer(person4));
+        System.out.println(people.offer(person1));
+        System.out.println(people.offer(person3));
 
-        System.out.println(people.remove());
-        System.out.println(people.peek());
-        System.out.println(people);
 
     }
 }
