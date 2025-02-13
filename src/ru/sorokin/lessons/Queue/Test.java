@@ -2,6 +2,7 @@ package ru.sorokin.lessons.Queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class Test {
     public static void main(String[] args) {
@@ -11,14 +12,16 @@ public class Test {
         Person person3=new Person(3);
         Person person4=new Person(4);
 
-        Queue<Person> people=new LinkedList<>();
+        Queue<Person> people=new ArrayBlockingQueue<Person>(10);
         people.add(person2);
         people.add(person4);
         people.add(person1);
         people.add(person3);
 
-        for (Person person:people)
-            System.out.println(person);
+        System.out.println(people.remove());
+        System.out.println(people.peek());
+        System.out.println(people);
+
     }
 }
 class Person {
