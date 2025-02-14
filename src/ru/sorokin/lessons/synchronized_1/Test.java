@@ -9,13 +9,15 @@ public class Test {
 
 
     }
-
+public synchronized void increment() {
+        counter++;
+}
     public void doWork() throws InterruptedException {
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < 10000; i++)
-                    counter++;
+                    increment();
 
 
             }
@@ -24,7 +26,7 @@ public class Test {
             @Override
             public void run() {
                 for (int i = 0; i < 10000; i++)
-                    counter++;
+                    increment();
 
 
             }
