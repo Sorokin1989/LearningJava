@@ -9,8 +9,10 @@ public class Test {
 
 
     }
-public synchronized void increment() {
-        counter++;
+public void increment() {
+        synchronized (this) {
+            counter++;
+        }
 }
     public void doWork() throws InterruptedException {
         Thread thread1 = new Thread(new Runnable() {
