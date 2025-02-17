@@ -57,6 +57,8 @@ class WaitAndNotify {
             System.out.println("Waiting for return key pressed");
             scanner.nextLine();
             notify();
+
+            Thread.sleep(5000);
         }
 
     }
