@@ -5,6 +5,7 @@ import java.util.Random;
 public class Test {
     public static void main(String[] args) throws InterruptedException {
         Runner runner = new Runner();
+
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -38,8 +39,16 @@ class Runner {
 
     public void firstThread() {
         Random random = new Random();
+
         for (int i = 0; i < 10000; i++) {
-            Account.transfer(account1, account2, random.nextInt(100));
+
+
+            synchronized (account1) {
+                synchronized (account2) {
+                    Account.transfer(account1, account2, random.nextInt(100));
+
+                }
+            }
         }
 
     }
@@ -47,9 +56,15 @@ class Runner {
     public void secondThread() {
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
-            Account.transfer(account2, account1, random.nextInt(100));
-        }
 
+
+            synchronized (account1) {
+                synchronized (account2) {
+                    Account.transfer(account2, account1, random.nextInt(100));
+
+                }
+            }
+        }
     }
 
     public void finished() {
