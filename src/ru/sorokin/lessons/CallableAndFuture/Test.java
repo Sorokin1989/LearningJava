@@ -1,18 +1,19 @@
 package ru.sorokin.lessons.CallableAndFuture;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 public class Test {
 
-    private static int result;
 
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(1);
-        executorService.submit(new Runnable() {
+        executorService.submit(new Callable<Integer>() {
+
+
             @Override
-            public void run() {
+            public Integer call() throws Exception {
                 System.out.println("Starting");
                 try {
                     Thread.sleep(3000);
@@ -20,18 +21,12 @@ public class Test {
                     throw new RuntimeException(e);
                 }
                 System.out.println("Finished");
-                result = 5;
+                return 5;
 
 
             }
         });
         executorService.shutdown();
-
-        try {
-            executorService.awaitTermination(1, TimeUnit.DAYS);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
         System.out.println(result);
     }
