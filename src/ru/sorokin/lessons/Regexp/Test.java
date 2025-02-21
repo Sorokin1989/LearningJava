@@ -10,6 +10,8 @@ public class Test {
         ? - 0 или 1 символов до
         (x|y|z) - одна строка из множества строк
 
+        [a-zA-Z] - все английские буквы
+
 
 
         */
@@ -21,5 +23,8 @@ public class Test {
         System.out.println(a.matches("(-|\\+)?\\d+"));
         System.out.println(b.matches("(-|\\+)?\\d+"));
         System.out.println(c.matches("(-|\\+)?\\d+"));
+
+        String d="ghrh1324464";
+        System.out.println(d.matches("[a-zA-Z]*\\d+"));
     }
 }
