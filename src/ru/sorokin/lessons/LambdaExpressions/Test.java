@@ -51,10 +51,10 @@ public class Test {
         filList(list3);
 
         int sum1 = Arrays.stream(arr3).reduce(Integer::sum).getAsInt();
-        int sum2 = list3.stream().reduce((acc, b) -> acc * b).get();
+        int product = list3.stream().reduce((acc, b) -> acc * b).get();
 
         System.out.println(sum1);
-        System.out.println(sum2);
+        System.out.println(product);
 
     }
 
