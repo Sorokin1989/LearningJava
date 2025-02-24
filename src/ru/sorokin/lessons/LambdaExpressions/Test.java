@@ -26,14 +26,11 @@ public class Test {
         //});
 
         list.sort((s1, s2) -> {
-            if (s1.length() > s2.length()) {
-                return 1;
-            } else if (s1.length() < s2.length()) {
-                return -1;
-            } else {
-                return 0;
+            if (s1.length() > s2.length()) return 1;
+            else if (s1.length() < s2.length()) return -1;
+            else return 0;
 
-            }
+
         });
 
 
