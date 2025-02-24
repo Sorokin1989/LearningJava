@@ -1,12 +1,12 @@
 package ru.sorokin.lessons.LambdaExpressions;
 
 interface Executable {
-    int execut();
+    int execut(int x,int y);
 }
 
 class Runner {
     public void run(Executable e) {
-       int a= e.execut();
+       int a= e.execut(10,15);
         System.out.println(a);
 
     }
@@ -17,22 +17,20 @@ public class Test {
     public static void main(String[] args) {
 
         Runner runner = new Runner();
+        int a=1;
 
         runner.run(new Executable() {
             @Override
-            public int execut() {
-                System.out.println("Hello");
-                System.out.println("Goodbye");
-                return 1;
+            public int execut(int x,int y) {
+                int a=2;
+                return x+y;
 
             }
         });
 
-        runner.run(() -> {
-            System.out.println("Hello");
-            System.out.println("Goodbye");
-            return 5;
-        });
+
+        runner.run( (x,y)->x+ y);
+
 
 
     }
