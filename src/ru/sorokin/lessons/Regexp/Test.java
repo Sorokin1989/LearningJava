@@ -1,5 +1,7 @@
 package ru.sorokin.lessons.Regexp;
 
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
 
@@ -45,5 +47,15 @@ public class Test {
 
         String f="12";
         System.out.println(f.matches("\\d{2}"));
+
+
+        String u="hello1314there2425hey242fbhfn";
+       String[] words= u.split("\\d+");
+        System.out.println(Arrays.toString(words));
+
+        String i="Hello there hey";
+       String modifiedString=i.replaceAll(" ",".");
+        System.out.println(modifiedString);
+
     }
 }
