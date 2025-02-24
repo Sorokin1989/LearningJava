@@ -56,7 +56,16 @@ public class Test {
         System.out.println(sum1);
         System.out.println(product);
 
+
+        int[] arr4=new int[10];
+        fillArr(arr4);
+
+       int[] newArray= Arrays.stream(arr4).filter(a->a%2!=0).map(a->a*2).toArray();
+        System.out.println(Arrays.toString(newArray));
+
+
     }
+
 
     private static void filList(List<Integer> list) {
         for (int i = 0; i < 10; i++) {
