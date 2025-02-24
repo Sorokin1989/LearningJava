@@ -1,21 +1,13 @@
 package ru.sorokin.lessons.LambdaExpressions;
 
 interface Executable {
-    void execut();
+    int execut();
 }
 
 class Runner {
     public void run(Executable e) {
-        e.execut();
-
-    }
-}
-
-class ExecutableImplementation implements Executable {
-
-    @Override
-    public void execut() {
-        System.out.println("Hello");
+       int a= e.execut();
+        System.out.println(a);
 
     }
 }
@@ -25,16 +17,22 @@ public class Test {
     public static void main(String[] args) {
 
         Runner runner = new Runner();
-        runner.run(new ExecutableImplementation());
 
         runner.run(new Executable() {
             @Override
-            public void execut() {
+            public int execut() {
                 System.out.println("Hello");
+                System.out.println("Goodbye");
+                return 1;
+
             }
         });
 
-        runner.run(() -> System.out.println("Hello"));
+        runner.run(() -> {
+            System.out.println("Hello");
+            System.out.println("Goodbye");
+            return 5;
+        });
 
 
     }
