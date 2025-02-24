@@ -1,8 +1,6 @@
 package ru.sorokin.lessons.LambdaExpressions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Test {
@@ -57,11 +55,23 @@ public class Test {
         System.out.println(product);
 
 
-        int[] arr4=new int[10];
+        int[] arr4 = new int[10];
         fillArr(arr4);
 
-       int[] newArray= Arrays.stream(arr4).filter(a->a%2!=0).map(a->a*2).toArray();
+        int[] newArray = Arrays.stream(arr4).filter(a -> a % 2 != 0).map(a -> a * 2).toArray();
         System.out.println(Arrays.toString(newArray));
+
+        Set<Integer> set = new HashSet<>();
+
+        set.add(1);
+        set.add(2);
+        set.add(5);
+
+        System.out.println(set);
+
+        set = set.stream().map(a -> a * 3).collect(Collectors.toSet());
+
+        System.out.println(set);
 
 
     }
