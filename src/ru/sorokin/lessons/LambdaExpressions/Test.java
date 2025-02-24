@@ -1,41 +1,46 @@
 package ru.sorokin.lessons.LambdaExpressions;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("Hello");
-        list.add("Goodbye");
-        list.add("a");
-        list.add("ab");
+        int[] arr = new int[10];
+        List<Integer> list = new ArrayList<>();
+        fillArr(arr);
+        filList(list);
 
-        //list.sort(new Comparator<String>() {
-        //    @Override
-        //    public int compare(String o1, String o2) {
-        //        if (o1.length() > o2.length()) {
-        //            return 1;
-        //        } else if (o1.length() < o2.length()) {
-        //            return -1;
-        //        } else {
-        //            return 0;
-//
-        //        }
-        //    }
-        //});
-
-        Comparator<String> comparator = ((s1, s2) -> {
-            if (s1.length() > s2.length()) return 1;
-            else if (s1.length() < s2.length()) return -1;
-            else return 0;
-
-        });
-
-        list.sort(comparator);
         System.out.println(list);
+        System.out.println(Arrays.toString(arr));
 
+
+
+
+        for (int i = 0; i < 10; i++) {
+            arr[i] = arr[i] * 2;
+            list.set(i, list.get(i) * 2);
+
+        }
+
+        System.out.println(list);
+        System.out.println(Arrays.toString(arr));
 
     }
+
+    private static void filList(List<Integer> list) {
+        for (int i = 0; i < 10; i++) {
+            list.add(i + 1);
+
+        }
+
+    }
+
+    private static void fillArr(int[] arr) {
+        for (int i = 0; i < 10; i++) {
+            arr[i] = i + 1;
+        }
+
+    }
+
 }
