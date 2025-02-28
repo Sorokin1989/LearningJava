@@ -1,17 +1,17 @@
 package ru.sorokin.lessons.Annotation;
 
 @MyAnnotation
-public class Test {
+public class Test1 {
     @MyAnnotation
     private String name;
 
     @MyAnnotation
-    public Test() {
+    public Test1() {
 
     }
 
     @MyAnnotation
-    public void test(@MyAnnotation int value) {
+    public void test1(@MyAnnotation int value) {
         @MyAnnotation String localVar = "Hello";
 
     }
