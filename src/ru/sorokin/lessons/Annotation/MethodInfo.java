@@ -1,7 +1,7 @@
 package ru.sorokin.lessons.Annotation;
 
 public @interface MethodInfo {
-    String author();
-    int dateOfCreation();
+    String author()default "Dima";
+    int dateOfCreation()default 2025;
     String purpose();
 }
