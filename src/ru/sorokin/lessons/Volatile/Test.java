@@ -15,7 +15,7 @@ public class Test {
 
     }
 }
-class MyThread extends Thread {
+ class MyThread extends Thread {
     private volatile boolean running=true;
     public void run() {
         while (running) {
