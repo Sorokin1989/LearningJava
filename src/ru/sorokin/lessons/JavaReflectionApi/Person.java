@@ -1,6 +1,6 @@
 package ru.sorokin.lessons.JavaReflectionApi;
 
-@Author(name="Dima", dateOfCreation = 2025)
+@Author(name = "Dima", dateOfCreation = 2025)
 
 public class Person {
     private int id;
@@ -36,5 +36,15 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

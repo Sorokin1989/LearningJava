@@ -1,34 +1,26 @@
 package ru.sorokin.lessons.JavaReflectionApi;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Scanner;
 
 public class Test {
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
+        Scanner scanner=new Scanner(System.in);
+        // Название_класса1 Название_класса2 Название_метода
 
-        Person person = new Person();
-        Class personClass = Person.class;
-        Class personClass2 = person.getClass();
-        Class personClass3 = Class.forName("ru.sorokin.lessons.JavaReflectionApi.Person");
+        Class<?> classObject1= Class.forName(scanner.next());
+        Class<?> classObject2= Class.forName(scanner.next());
+        String methodName=scanner.next();
 
-        //Method[] methods=personClass.getMethods();
-        //for(Method method: methods) {
-        //    System.out.println(method.getName() + ", " + method.getReturnType() + ", " +
-        //            Arrays.toString(method.getParameterTypes()))
-        //}
-//
-        //Field[] fields = personClass.getDeclaredFields();
-        //for (Field field : fields) {
-        //    System.out.println(field.getName() + ", " + field.getType());
-//
-        //}
+        Method m=classObject1.getMethod(methodName, classObject2);
 
-        Annotation[] annotations = personClass.getAnnotations();
+        Object o1=classObject1.newInstance();
+        Object o2=classObject2.getConstructor(String.class).newInstance("String value");
 
-        for (Annotation annotation:annotations) {
-          if(annotation instanceof Author) {
-              System.out.println("Yes");
-          }
-        }
+        m.invoke(o1,o2);
+
+        System.out.println(o1);
+
     }
 }
