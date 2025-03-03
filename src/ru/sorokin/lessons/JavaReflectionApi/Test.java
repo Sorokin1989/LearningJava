@@ -1,5 +1,6 @@
 package ru.sorokin.lessons.JavaReflectionApi;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
 public class Test {
@@ -16,10 +17,18 @@ public class Test {
         //            Arrays.toString(method.getParameterTypes()))
         //}
 //
-        Field[] fields = personClass.getDeclaredFields();
-        for (Field field : fields) {
-            System.out.println(field.getName() + ", " + field.getType());
+        //Field[] fields = personClass.getDeclaredFields();
+        //for (Field field : fields) {
+        //    System.out.println(field.getName() + ", " + field.getType());
+//
+        //}
 
+        Annotation[] annotations = personClass.getAnnotations();
+
+        for (Annotation annotation:annotations) {
+          if(annotation instanceof Author) {
+              System.out.println("Yes");
+          }
         }
     }
 }
