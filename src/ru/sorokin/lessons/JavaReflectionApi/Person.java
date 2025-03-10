@@ -11,7 +11,6 @@ public class Person {
         this.name = "No name";
     }
 
-    ;
 
     public Person(int id, String name) {
         this.id = id;
