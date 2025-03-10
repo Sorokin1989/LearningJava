@@ -6,17 +6,19 @@ public class HelloWorld {
         System.out.println("Hello, " + name);
 
         if (name.equals("Dima")) {
-            grantPermission();
-            grantPermission();
-            grantPermission();
-            grantPermission();
-            grantPermission();
+
+            checkUser(name);
 
         }
     }
 
-    static void grantPermission() {
-        System.out.println("Special user priveledges granted!");
+    static void checkUser(String nameChek) {
+
+        if (nameChek == "Dima") {
+            System.out.println("Special user priveledges granted!");
+        }
+
+
     }
 }
 
