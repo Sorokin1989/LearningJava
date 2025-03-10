@@ -5,7 +5,7 @@ public class HelloWorld {
         String name="Dima";
         System.out.println("Hello, " + name );
 
-        if(name=="Dima") {
+        if(name.equals("Dima")) {
             System.out.println("Special user priveledges granted!");
         }
 
