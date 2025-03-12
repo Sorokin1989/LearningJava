@@ -4,37 +4,20 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        //Scanner scanner = new Scanner(System.in);
-        //System.out.println("Введи возраст: ");
-        //int age = scanner.nextInt();
-        //if (age == 0) {
-        //    System.out.println("Ты родился");
-        //} else if (age == 7) {
-        //    System.out.println("Ты пошел в школу");
-        //} else if (age == 18) {
-        //    System.out.println("Ты закончил школу");
-        //} else {
-        //    System.out.println("Ни одно из условий не подошло");
-        //}
-//
+        int[] numbers=new int[5];
+        for(int i=0;i<numbers.length;i++) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введи возраст :");
-        int age = scanner.nextInt();
+            numbers[i]=i*10;
 
-        switch (age) {
-            case 0:
-                System.out.println("Ты родился");
-                break;
-            case 7:
-                System.out.println("Ты пошел в школу");
-                break;
-            case 18:
-                System.out.println("Ты закончил школу");
-                break;
-            default:
-                System.out.println("Ни одно из условий не подходит");
+            System.out.println(numbers[i]);
+
         }
+
+        System.out.println();
+      int[] numbers1={1,3,4,5,6,7,8,9,0};
+      for (int i=0; i<numbers1.length;i++)
+        System.out.println(numbers1[i]);
+
     }
 
 }
