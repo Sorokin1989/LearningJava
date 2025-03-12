@@ -1,42 +1,22 @@
 package ru.sorokin.lessons.alishev;
 
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
-        //Scanner scanner = new Scanner(System.in);
-        //System.out.println("Введите 5: ");
-        //int value = scanner.nextInt();
-        //while (value != 5) {
-        //    System.out.println("Введи 5: ");
-        //    value = scanner.nextInt();
-        //}
-        //System.out.println("Вы ввели 5");
-
-        //Scanner scanner = new Scanner(System.in);
-        //int value;
-        //do {
-        //    System.out.println("Введите 5: ");
-        //    value = scanner.nextInt();
-        //}
-        //while (value != 5);
-        //System.out.println("Вы ввели 5: ");
-//
-//
-
-        //int i = 0;
-        //while (true) {
-        //    if (i == 15)
-        //        break;
-        //    System.out.println(i);
-        //    i++;
-        //}
-        //System.out.println("Мы вышли из цикла");
-
-        for (int i = 0; i < 15; i++) {
-            if (i % 2 == 0) {
-                continue;
-            }
-            System.out.println("Это нечетное число " + i);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введи возраст: ");
+        int age = scanner.nextInt();
+        if (age == 0) {
+            System.out.println("Ты родился");
+        } else if (age == 7) {
+            System.out.println("Ты пошел в школу");
+        } else if (age == 18) {
+            System.out.println("Ты закончил школу");
+        } else {
+            System.out.println("Ни одно из условий не подошло");
         }
+
     }
 
 }
